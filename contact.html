@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - NitroDrive</title>
+    <title>Contact - JAYSON VELASCO</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">NitroDrive</a>
+            <a href="index.html" class="logo">JTV</a>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -25,13 +25,13 @@
 
     <section class="page-content">
         <div style="text-align: center; margin-bottom: 3rem;">
-            <h1>Contact NitroDrive</h1>
-            <p class="section-intro">Get in touch with our team to discuss your vehicle needs!</p>
+            <h1>Contact Me</h1>
+            <p class="section-intro">Let's connect! Feel free to reach out with any inquiries or collaboration opportunities.</p>
         </div>
         
         <div class="contact-container">
             <div class="contact-form-section">
-                <h2>Send us a Message</h2>
+                <h2>Send me a Message</h2>
                 <form id="contactForm" class="contact-form">
                     <div class="form-group">
                         <label for="name">Full Name:</label>
@@ -68,12 +68,60 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <p>&copy; 2026 Jayson T. Velasco. All rights reserved.</p>
-                <p>Designed with HTML, CSS, and JavaScript</p>
+                <p>&copy; 2026 JAYSON VELASCO. All rights reserved.</p>
+                <p>Your trusted web developer portfolio</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Hamburger menu toggle
+        var hamburger = document.querySelector('.hamburger');
+        var navMenu = document.querySelector('.nav-menu');
+
+        hamburger.onclick = function() {
+            navMenu.classList.toggle('active');
+        };
+
+        // Contact form handling
+        var form = document.getElementById('contactForm');
+        var msg = document.getElementById('formMessage');
+
+        form.onsubmit = function(e) {
+            e.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            // Check required fields
+            if (!name || !email || !subject || !message) {
+                msg.textContent = 'Please fill in all required fields';
+                msg.className = 'form-message error';
+                msg.style.display = 'block';
+                return;
+            }
+
+            // Check email format
+            if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+                msg.textContent = 'Please enter a valid email address';
+                msg.className = 'form-message error';
+                msg.style.display = 'block';
+                return;
+            }
+
+            // Show success message and reset form
+            msg.textContent = 'Thank you! Your message has been sent successfully!';
+            msg.className = 'form-message success';
+            msg.style.display = 'block';
+            form.reset();
+
+            // Hide message after 5 seconds
+            setTimeout(function() {
+                msg.style.display = 'none';
+            }, 5000);
+        };
+    </script>
 </body>
 </html>
