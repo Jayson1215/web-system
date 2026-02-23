@@ -47,6 +47,14 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Hamburger menu toggle
+        var hamburger = document.querySelector('.hamburger');
+        var navMenu = document.querySelector('.nav-menu');
+
+        hamburger.onclick = function() {
+            navMenu.classList.toggle('active');
+        };
+    </script>
 </body>
 </html>
