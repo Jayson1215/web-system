@@ -120,12 +120,6 @@ body {
   transition: all 0.3s ease;
 }
 
-.cta-button:hover {
-  background: #ffffff;
-  box-shadow: 0 4px 12px rgba(255, 184, 28, 0.3);
-  transform: translateY(-2px);
-}
-
 .cta-button:active {
   transform: translateY(0);
 }
@@ -291,12 +285,6 @@ body {
   transition: all 0.3s ease;
 }
 
-.submit-button:hover {
-  background: #FFC840;
-  box-shadow: 0 4px 12px rgba(255, 184, 28, 0.3);
-  transform: translateY(-2px);
-}
-
 .form-message {
   padding: 1rem;
   margin-bottom: 1rem;
@@ -347,11 +335,6 @@ body {
   color: #FFB81C;
   text-decoration: none;
   font-weight: 500;
-}
-
-.footer a:hover {
-  color: #FFC840;
-  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
