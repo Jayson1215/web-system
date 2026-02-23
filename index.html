@@ -58,26 +58,6 @@
         </div>
     </footer>
 
-    <script>
-        // Hamburger menu toggle
-        var hamburger = document.querySelector('.hamburger');
-        var navMenu = document.querySelector('.nav-menu');
-
-        hamburger.onclick = function() {
-            navMenu.classList.toggle('active');
-        };
-
-        // Animate feature cards on scroll
-        function animateOnScroll() {
-            var cards = document.querySelectorAll('.feature-card');
-            for (var i = 0; i < cards.length; i++) {
-                if (cards[i].getBoundingClientRect().top < window.innerHeight * 0.75) {
-                    cards[i].style.animation = 'fadeInUp 0.6s ease forwards';
-                }
-            }
-        }
-        animateOnScroll();
-        window.onscroll = animateOnScroll;
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
